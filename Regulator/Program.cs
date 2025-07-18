@@ -77,15 +77,15 @@ namespace Regulator
                 Console.WriteLine($" - {calculations[i].Unit.Name}");
             });
             Console.WriteLine("\n___FINISH___");
-            foreach (var item in results)
-            {
-                Console.WriteLine($"\n{item.Name}");
-                Console.WriteLine($"{item.Factor}");
-                foreach (var item1 in item.Diagram)
-                {
-                    Console.WriteLine($"\t{item1.X} : {item1.Y}");
-                }
-            }
+            //foreach (var item in results)
+            //{
+            //    Console.WriteLine($"\n{item.Name}");
+            //    Console.WriteLine($"{item.Factor}");
+            //    foreach (var item1 in item.Diagram)
+            //    {
+            //        Console.WriteLine($"\t{item1.X} : {item1.Y}");
+            //    }
+            //}
 
             string jsonStr = JsonSerializer.Serialize(
                 results,
