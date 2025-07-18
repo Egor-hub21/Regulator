@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Regulator.RastrProxy\Regulator.RastrAcces.csproj" />
+  </ItemGroup>
+	
+	<ItemGroup>
+		<Reference Include="ConnectionRastr">
+			<HintPath>..\..\ConnectionRastr\ConnectionRastr\bin\Debug\net8.0\ConnectionRastr.dll</HintPath>
+		</Reference>
+		<Reference Include="ConnectionRastr.Expansion">
+		  <HintPath>..\..\ConnectionRastr\ConnectionRastr.Expansion\bin\Debug\net8.0\ConnectionRastr.Expansion.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>

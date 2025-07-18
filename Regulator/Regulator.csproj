@@ -14,7 +14,7 @@
 	</ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Regulator.Domain\Regulator.Domain.csproj" />
+    <ProjectReference Include="..\Regulator.Calculations\Regulator.Calculations.csproj" />
     <ProjectReference Include="..\Regulator.RastrProxy\Regulator.RastrAcces.csproj" />
   </ItemGroup>
 
