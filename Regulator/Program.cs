@@ -43,8 +43,15 @@ namespace Regulator
             ValueNumber vir = new(config.Vir);
             double stepFactor = config.StepFactor;
             string filePath = new(config.FilePath);
-            string resultPath = new(config.ResultPath);
 
+            if (!Directory.Exists(
+                Path.GetDirectoryName(new(config.ResultPath)))
+            )
+            {
+                Directory.CreateDirectory(
+                    Path.GetDirectoryName(new(config.ResultPath))
+                );
+            }
 
             Calculation[] calculations = generationUnits.Select(g => 
                 new Calculation(section.Value, vir.Value, g, 10, stepFactor)
@@ -102,7 +109,7 @@ namespace Regulator
             Console.WriteLine(jsonStr);
             // Запись JSON в файл
             File.WriteAllText(
-                resultPath,
+                Path.GetDirectoryName(new(config.ResultPath)),
                 jsonStr
             );
         }
